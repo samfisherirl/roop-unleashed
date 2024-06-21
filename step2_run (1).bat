@@ -20,7 +20,7 @@ IF NOT "%VIRTUAL_ENV%" == "" (
     ECHO Virtual environment activated.
     ECHO Installing dependencies...
     %python% -m pip install --upgrade pip
-    %python% -m pip install aTrain@git+https://github.com/JuergenFleiss/aTrain.git --extra-index-url https://download.pytorch.org/whl/cu118
+    %python% -m pip install -r requirements.txt
 
     ECHO Dependencies installed. 
     :FoundPyFile
@@ -29,7 +29,7 @@ IF NOT "%VIRTUAL_ENV%" == "" (
     ECHO Failed to activate virtual environment.
 )
 
+python run.py
 :End
-aTrain start        
 REM Pause the command window
 cmd /k 
